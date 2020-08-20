@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "_id": "dress1",
+      "image": "/images/dress1.jpg",
+      "title": "cute dress",
+      "descripton": "This is the newest trend",
+      "availableSizes": ["S", "M", "L"],
+      "price": 10
+    },
+    {
+      "_id": "dress2",
+      "image": "/images/dress2.jpg",
+      "title": "cute dress",
+      "descripton": "This is the newest trend",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "price": 11
+    },
+    {
+      "_id": "dress3",
+      "image": "/images/dress3.jpg",
+      "title": "cute dress",
+      "descripton": "This is the newest trend",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "price": 12
+    },
+    {
+      "_id": "dress4",
+      "image": "/images/dress4.jpg",
+      "title": "cute dress",
+      "descripton": "This is the newest trend",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "price": 13
+    },
+    {
+      "_id": "dress5",
+      "image": "/images/dress5.jpg",
+      "title": "cute dress",
+      "descripton": "This is the newest trend",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "price": 14
+    },
+    {
+      "_id": "dress6",
+      "image": "/images/dress6.jpg",
+      "title": "cute dress",
+      "descripton": "This is the newest trend",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "price": 15
+    }
+  ]
+}
