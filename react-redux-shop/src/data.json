@@ -3,7 +3,7 @@
             "_id": "dress1",
             "image": "/images/dress1.jpg",
             "title": "dress 1",
-            "descripton": "This is the newest trend",
+            "description": "This is the newest trend",
             "availableSizes": ["S", "M", "L"],
             "price": 10
         },
@@ -11,41 +11,41 @@
             "_id": "dress2",
             "image": "/images/dress2.jpg",
             "title": "dress 2",
-            "descripton": "This is the newest trend",
+            "description": "This is the newest trend",
             "availableSizes": ["S", "M", "L", "XL"],
-            "price": 11
+            "price": 15
         },
         {
             "_id": "dress3",
             "image": "/images/dress3.jpg",
             "title": "dress 3 ",
-            "descripton": "This is the newest trend",
-            "availableSizes": ["S", "M", "L", "XL"],
-            "price": 12
+            "description": "This is the newest trend",
+            "availableSizes": ["M", "L", "XL"],
+            "price": 20
         },
         {
             "_id": "dress4",
             "image": "/images/dress4.jpg",
             "title": "dress 4",
-            "descripton": "This is the newest trend",
-            "availableSizes": ["S", "M", "L", "XL"],
-            "price": 13
+            "description": "This is the newest trend",
+            "availableSizes": ["M", "L", "XL", "XXL"],
+            "price": 25
         },
         {
             "_id": "dress5",
             "image": "/images/dress5.jpg",
             "title": "dress 5",
-            "descripton": "This is the newest trend",
-            "availableSizes": ["S", "M", "L", "XL"],
-            "price": 14
+            "description": "This is the newest trend",
+            "availableSizes": ["S", "M", "L", "XL", "XXL"],
+            "price": 30
         },
         {
             "_id": "dress6",
             "image": "/images/dress6.jpg",
             "title": "dress 6",
-            "descripton": "This is the newest trend",
-            "availableSizes": ["S", "M", "L", "XL"],
-            "price": 15
+            "description": "This is the newest trend",
+            "availableSizes": ["XS", "S", "M", "L", "XL"],
+            "price": 35
         }
     ]
 }
