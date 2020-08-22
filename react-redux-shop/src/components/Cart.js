@@ -11,10 +11,10 @@ export default class Cart extends Component {
           : <div className="cart cart-header">
               You order {cartItems.length} item in the cart {''}
             </div>}
-        {/* <div>
+        <div>
           <div className="cart">
             <ul className="cart-items">
-              {cartItems.map (item => {
+              {cartItems.map (item => (
                 <li key={item._id}>
                   <div>
                     <img src={item.image} alt={item.title} />
@@ -22,17 +22,20 @@ export default class Cart extends Component {
                   <div>
                     <div>{item.title}</div>
                     <div className="right">
-                      {formatCurrency (item.price)} x {item.count}
-                      <button onClick={() => this.props.removeFromCart (item)}>
+                      {formatCurrency (item.price)} x {item.count}{' '}
+                      <button
+                        className="button"
+                        onClick={() => this.props.removeFromCart (item)}
+                      >
                         Remove
                       </button>
                     </div>
                   </div>
-                </li>;
-              })}
+                </li>
+              ))}
             </ul>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }
