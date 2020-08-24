@@ -15,7 +15,6 @@ class App extends React.Component {
       size: '',
       sort: '',
       name: '',
-      // names: data.products.tittle,
     };
   }
 
