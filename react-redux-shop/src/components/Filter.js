@@ -11,22 +11,18 @@ export default class Filter extends Component {
   }
 
   render () {
-    console.log (this.props.tittle);
-    let showTitle = null;
-    if (this.state.products !== null) {
-      this.state.products.map (
-        product =>
-          (showTitle = (
-            <select
-              key={product._id}
-              value={product.title}
-              onChange={this.props.searchByName}
-            >
-              <option value={product.title}>{product.title}</option>
-            </select>
-          ))
-      );
-    }
+    // console.log (this.props.tittle);
+    // let showTitle = null;
+    // if (this.state.products !== null) {
+    //   this.state.products.map (
+    //     product =>
+    //       (showTitle = (
+    //         <select value={product.title} onChange={this.props.searchByName}>
+    //           <option value={product.title}>{product.title}</option>
+    //         </select>
+    //       ))
+    //   );
+    // }
 
     return (
       <div className="filter">
@@ -36,15 +32,15 @@ export default class Filter extends Component {
             value={this.props.tittle}
             onChange={this.props.searchByName}
           >
-            {/* <option value="">ALL</option>
+            <option value="">ALL</option>
             <option value="dress 1">dress 1</option>
             <option value="dress 2">dress 2</option>
             <option value="dress 3">dress 3</option>
             <option value="dress 4">dress 4</option>
             <option value="dress 5">dress 5</option>
-            <option value="dress 6">dress 6</option> */}
-            <option value="">ALL</option>
-            <option value="">{showTitle}</option>
+            <option value="dress 6">dress 6</option>
+            {/* <option value="">ALL</option>
+            <option value="">{showTitle}</option> */}
           </select>
 
         </div>
