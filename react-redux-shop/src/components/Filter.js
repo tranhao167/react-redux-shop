@@ -1,10 +1,58 @@
 import React, {Component} from 'react';
+import data from '../data.json';
+import Products from './Products';
 
 export default class Filter extends Component {
+  constructor (props) {
+    super (props);
+    this.state = {
+      products: data.products,
+    };
+  }
+
+  //   const showSelect = this.props.product.map(pro =>{
+  //   return (<select key = {pro.id}></select>
+  //     <option value = {prop.title}></option>)
+
+  // })
+
   render () {
+    console.log (this.props.tittle);
+    let showTitle = null;
+    // if (this.state.products !== null) {
+
+    //   this.state.products.map (
+    //     product =>
+    //       (showTitle = (
+    //         <select
+    //           key={product._id}
+    //           value={product.title}
+    //           onChange={this.props.searchByName}
+    //         >
+    //           <option value={product.title}>{product.title}</option>
+    //         </select>
+    //       ))
+    //   );
+    // }
     return (
       <div className="filter">
         <div className="filter-result">{this.props.count} Products</div>
+        <div className="filter-searchByName">
+          Name{''}<select
+            value={this.props.tittle}
+            onChange={this.props.searchByName}
+          >
+            <option value="">ALL</option>
+            <option value="dress1">dress 1</option>
+            <option value="dress2">dress 2</option>
+            <option value="dress3">dress 3</option>
+            <option value="dress4">dress 4</option>
+            <option value="dress5">dress 5</option>
+            <option value="dress6">dress 6</option>
+
+          </select>
+
+        </div>
         <div className="filter-sort">
           Order{''}
           <select value={this.props.sort} onChange={this.props.sortProducts}>
