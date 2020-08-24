@@ -46,6 +46,22 @@
             "description": "This is the newest trend",
             "availableSizes": ["XS", "S", "M", "L", "XL"],
             "price": 35
+        },
+        {
+            "_id": "dress7",
+            "image": "/images/dress7.jpg",
+            "title": "dress 1",
+            "description": "This is the newest trend",
+            "availableSizes": ["XS", "S", "M", "L", "XL"],
+            "price": 10
+        },
+        {
+            "_id": "dress8",
+            "image": "/images/dress8.jpg",
+            "title": "dress 1",
+            "description": "This is the newest trend",
+            "availableSizes": ["XS", "S", "M", "L"],
+            "price": 15
         }
     ]
 }
