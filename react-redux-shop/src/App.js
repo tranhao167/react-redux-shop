@@ -3,8 +3,8 @@ import data from './data.json';
 import Products from './components/Products';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor () {
+    super ();
     this.state = {
       product: data.products,
       size: '',
@@ -12,18 +12,18 @@ class App extends React.Component {
     };
   }
 
-  render() {
+  render () {
     return (
-      <div className='grid-container'>
+      <div className="grid-container">
         <header>
-          <a href='/'>React Shop</a>
+          <a href="/">React Shop</a>
         </header>
         <main>
-          <div className='content'>
-            <div className='main'>
-              <Products products={this.state.products}></Products>
+          <div className="content">
+            <div className="main">
+              <Products products={this.state.products} />
             </div>
-            <div className='sidebar'>Cart Items</div>
+            <div className="sidebar">Cart Items</div>
           </div>
         </main>
         <footer> This is reserved</footer>
@@ -31,5 +31,7 @@ class App extends React.Component {
     );
   }
 }
+
+//cmt to update
 
 export default App;
