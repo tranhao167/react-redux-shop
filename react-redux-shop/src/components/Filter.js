@@ -10,30 +10,24 @@ export default class Filter extends Component {
     };
   }
 
-  //   const showSelect = this.props.product.map(pro =>{
-  //   return (<select key = {pro.id}></select>
-  //     <option value = {prop.title}></option>)
-
-  // })
-
   render () {
     console.log (this.props.tittle);
     let showTitle = null;
-    // if (this.state.products !== null) {
+    if (this.state.products !== null) {
+      this.state.products.map (
+        product =>
+          (showTitle = (
+            <select
+              key={product._id}
+              value={product.title}
+              onChange={this.props.searchByName}
+            >
+              <option value={product.title}>{product.title}</option>
+            </select>
+          ))
+      );
+    }
 
-    //   this.state.products.map (
-    //     product =>
-    //       (showTitle = (
-    //         <select
-    //           key={product._id}
-    //           value={product.title}
-    //           onChange={this.props.searchByName}
-    //         >
-    //           <option value={product.title}>{product.title}</option>
-    //         </select>
-    //       ))
-    //   );
-    // }
     return (
       <div className="filter">
         <div className="filter-result">{this.props.count} Products</div>
@@ -42,14 +36,15 @@ export default class Filter extends Component {
             value={this.props.tittle}
             onChange={this.props.searchByName}
           >
+            {/* <option value="">ALL</option>
+            <option value="dress 1">dress 1</option>
+            <option value="dress 2">dress 2</option>
+            <option value="dress 3">dress 3</option>
+            <option value="dress 4">dress 4</option>
+            <option value="dress 5">dress 5</option>
+            <option value="dress 6">dress 6</option> */}
             <option value="">ALL</option>
-            <option value="dress1">dress 1</option>
-            <option value="dress2">dress 2</option>
-            <option value="dress3">dress 3</option>
-            <option value="dress4">dress 4</option>
-            <option value="dress5">dress 5</option>
-            <option value="dress6">dress 6</option>
-
+            <option value="">{showTitle}</option>
           </select>
 
         </div>
