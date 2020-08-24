@@ -11,7 +11,7 @@ export default class Filter extends Component {
   }
 
   render () {
-    // console.log (this.props.tittle);
+    // console.log (this.props.title);
     // let showTitle = null;
     // if (this.state.products !== null) {
     //   this.state.products.map (
