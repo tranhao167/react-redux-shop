@@ -14,11 +14,15 @@ class App extends React.Component {
         : [],
       size: '',
       sort: '',
+      name: '',
+      // names: data.products.tittle,
     };
   }
+
   createOrder = order => {
     alert ('Need to save order for ' + order.name);
   };
+
   removeFromCart = product => {
     const cartItems = this.state.cartItems.slice ();
     this.setState ({
@@ -29,6 +33,7 @@ class App extends React.Component {
       JSON.stringify (cartItems.filter (x => x._id !== product._id))
     );
   };
+
   addToCart = product => {
     const cartItems = this.state.cartItems.slice ();
     let alreadyInCart = false;
@@ -45,6 +50,21 @@ class App extends React.Component {
     this.setState ({cartItems});
     localStorage.setItem ('cartItems', JSON.stringify (cartItems));
   };
+
+  searchByName = event => {
+    console.log (event.target.value);
+    if (event.target.value === '') {
+      this.setState ({name: event, products: data.products});
+    } else {
+      this.setState ({
+        name: event.target.value,
+        products: data.products.filter (
+          product => product.title.indexOf (event.target.value) >= 0
+        ),
+      });
+    }
+  };
+
   sortProducts = event => {
     const sort = event.target.value;
     console.log (event.target.value);
@@ -62,6 +82,7 @@ class App extends React.Component {
         ),
     }));
   };
+
   filterProducts = event => {
     console.log (event.target.value);
     if (event.target.value === '') {
@@ -75,6 +96,7 @@ class App extends React.Component {
       });
     }
   };
+
   render () {
     return (
       <div className="grid-container">
@@ -88,8 +110,10 @@ class App extends React.Component {
                 count={this.state.products.length}
                 size={this.state.size}
                 sort={this.state.sort}
-                filterProducts={this.filterProducts}
+                name={this.state.name}
+                searchByName={this.searchByName}
                 sortProducts={this.sortProducts}
+                filterProducts={this.filterProducts}
               />
               <Products
                 products={this.state.products}
