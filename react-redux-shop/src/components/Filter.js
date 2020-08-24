@@ -11,18 +11,18 @@ export default class Filter extends Component {
   }
 
   render () {
-    // console.log (this.props.title);
-    // let showTitle = null;
-    // if (this.state.products !== null) {
-    //   this.state.products.map (
-    //     product =>
-    //       (showTitle = (
-    //         <select value={product.title} onChange={this.props.searchByName}>
-    //           <option value={product.title}>{product.title}</option>
-    //         </select>
-    //       ))
-    //   );
-    // }
+    console.log (this.props.title);
+    let showTitle = null;
+    if (this.state.products !== null) {
+      this.state.products.map (
+        product =>
+          (showTitle = (
+            <select value={product.title} onChange={this.props.searchByName}>
+              <option value={product.title}>{product.title}</option>
+            </select>
+          ))
+      );
+    }
 
     return (
       <div className="filter">
